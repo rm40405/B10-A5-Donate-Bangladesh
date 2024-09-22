@@ -49,14 +49,15 @@
         </div>
       </nav>
     </header>
+    <div class="flex justify-center space-x-4">
+      <button onclick="showDonation()" class="btn bg-primary">Donation</button>
+      <button onclick="showHistory()" class="btn">History</button>
+    </div>
     <!-- main section -->
-    <main>
-      <div class="flex justify-center space-x-4">
-        <button class="btn bg-primary">Donation</button>
-        <button class="btn">History</button>
-      </div>
+    <main id="donation">
       <!-- donate section -->
       <section
+        id="history"
         class="lg:mx-80 mx-3 mt-16 lg:grid lg:grid-cols-2 grid grid-cols-1 gap-8 shadow-lg px-8 py-8 rounded-xl"
       >
         <div class="col-span-1">
@@ -153,5 +154,8 @@
       </section>
     </main>
     <footer class="py-20 bg-slate-100 mt-8"></footer>
+
+    <!-- js -->
+    <script src="./js/blog.js"></script>
   </body>
 </html>
