@@ -28,12 +28,20 @@
   </head>
   <body>
     <!-- navbar section -->
-    <header>
-      <nav class="bg-secondary py-5 flex justify-around mb-20">
-        <button class="btn bg-primary px-10 font-bold">Blog</button>
-        <div class="flex">
-          <img class="w-10 h-10" src="./assets/logo.png" alt="" />
-          <h3 class="font-bold mt-4 ml-2">Donate Bangladesh</h3>
+    <header class="bg-secondary">
+      <nav class="lg:py-5 py-3 flex justify-around mb-20">
+        <button
+          class="lg:btn bg-primary lg:px-10 font-bold text-xs px-2 rounded-lg"
+        >
+          Blog
+        </button>
+        <div class="lg:flex space-x-2">
+          <img
+            class="lg:w-10 lg:h-10 w-5 h-5 ml-12"
+            src="./assets/logo.png"
+            alt=""
+          />
+          <h3 class="font-bold lg:mt-4 lg:ml-2 text-xs">Donate Bangladesh</h3>
         </div>
         <div class="flex space-x-2">
           <img class="w-6 h-6" src="./assets/coin.png" alt="" />
@@ -49,7 +57,7 @@
       </div>
       <!-- donate section -->
       <section
-        class="mx-80 mt-16 grid grid-cols-2 gap-8 shadow-lg px-8 py-8 rounded-xl"
+        class="lg:mx-80 mx-3 mt-16 lg:grid lg:grid-cols-2 grid grid-cols-1 gap-8 shadow-lg px-8 py-8 rounded-xl"
       >
         <div class="col-span-1">
           <img class="" src="./assets/noakhali.png" alt="" />
@@ -81,19 +89,19 @@
       </section>
       <!-- donate feni -->
       <section
-        class="mx-80 mt-16 grid grid-cols-2 gap-8 shadow-lg px-8 py-8 rounded-xl"
+        class="lg:mx-80 mx-3 mt-16 lg:grid lg:grid-cols-2 grid grid-cols-1 gap-8 shadow-lg px-8 py-8 rounded-xl"
       >
-        <div class="col-span-1">
-          <img class="" src="./assets/noakhali.png" alt="" />
+        <div class="lg:col-span-1">
+          <img class="" src="./assets/feni.png" alt="" />
         </div>
-        <div class="col-span-1">
+        <div class="lg:col-span-1">
           <button class="px-6 flex btn border space-x-1 py-2">
             <img class="w-5 h-5" src="./assets/coin.png" alt="" />
             <span class="">0</span>
             <span class="ml-1">BDT</span>
           </button>
           <h3 class="font-bold text-black py-4 text-lg">
-            Donate for Flood at Noakhali, Bangladesh
+            Donate for Flood Relief in Feni,Bangladesh
           </h3>
           <p class="text-gray-500 py-2">
             The recent floods in Noakhali have caused significant damage to
@@ -106,17 +114,17 @@
           <input
             type="text"
             placeholder="Write Donation Amount"
-            class="input input-bordered w-full my-5"
+            class="input input-bordered w-full my-8"
           />
           <button class="btn bg-primary w-full">Donate Now</button>
         </div>
       </section>
       <!-- qouta movment -->
       <section
-        class="mx-80 mt-16 grid grid-cols-2 gap-8 shadow-lg px-8 py-8 rounded-xl"
+        class="lg:mx-80 mx-3 mt-16 lg:grid lg:grid-cols-2 grid grid-cols-1 gap-8 shadow-lg px-8 py-8 rounded-xl"
       >
         <div class="col-span-1">
-          <img class="" src="./assets/noakhali.png" alt="" />
+          <img class="" src="./assets/quota-protest.png" alt="" />
         </div>
         <div class="col-span-1">
           <button class="px-6 flex btn border space-x-1 py-2">
@@ -125,7 +133,7 @@
             <span class="ml-1">BDT</span>
           </button>
           <h3 class="font-bold text-black py-4 text-lg">
-            Donate for Flood at Noakhali, Bangladesh
+            Aid for Injured in the Quota Movement
           </h3>
           <p class="text-gray-500 py-2">
             The recent floods in Noakhali have caused significant damage to
@@ -138,11 +146,12 @@
           <input
             type="text"
             placeholder="Write Donation Amount"
-            class="input input-bordered w-full my-5"
+            class="input input-bordered w-full my-10"
           />
           <button class="btn bg-primary w-full">Donate Now</button>
         </div>
       </section>
     </main>
+    <footer class="py-20 bg-slate-100 mt-8"></footer>
   </body>
 </html>
