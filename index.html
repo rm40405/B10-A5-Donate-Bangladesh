@@ -45,7 +45,7 @@
         </div>
         <div class="flex space-x-2">
           <img class="w-6 h-6" src="./assets/coin.png" alt="" />
-          <p class="inline-flex">5500 BDT</p>
+          <p class="inline-flex"><span id="acount-balance">5500</span> BDT</p>
         </div>
       </nav>
     </header>
@@ -57,7 +57,6 @@
     <main id="donation">
       <!-- donate section -->
       <section
-        id="history"
         class="lg:mx-80 mx-3 mt-16 lg:grid lg:grid-cols-2 grid grid-cols-1 gap-8 shadow-lg px-8 py-8 rounded-xl"
       >
         <div class="col-span-1">
@@ -66,7 +65,7 @@
         <div class="col-span-1">
           <button class="px-6 flex btn border space-x-1 py-2">
             <img class="w-5 h-5" src="./assets/coin.png" alt="" />
-            <span class="">0</span>
+            <span id="donate-amount1" class="">0</span>
             <span class="ml-1">BDT</span>
           </button>
           <h3 class="font-bold text-black py-4 text-lg">
@@ -81,11 +80,14 @@
             need.
           </p>
           <input
+            id="donate-input1"
             type="text"
             placeholder="Write Donation Amount"
             class="input input-bordered w-full my-5"
           />
-          <button class="btn bg-primary w-full">Donate Now</button>
+          <button onclick="donate(1)" class="btn bg-primary w-full">
+            Donate Nowa
+          </button>
         </div>
       </section>
       <!-- donate feni -->
@@ -98,7 +100,7 @@
         <div class="lg:col-span-1">
           <button class="px-6 flex btn border space-x-1 py-2">
             <img class="w-5 h-5" src="./assets/coin.png" alt="" />
-            <span class="">0</span>
+            <span id="donate-amount2" class="">0</span>
             <span class="ml-1">BDT</span>
           </button>
           <h3 class="font-bold text-black py-4 text-lg">
@@ -113,11 +115,14 @@
             need.
           </p>
           <input
+            id="donate-input2"
             type="text"
             placeholder="Write Donation Amount"
             class="input input-bordered w-full my-8"
           />
-          <button class="btn bg-primary w-full">Donate Now</button>
+          <button onclick="donate(2)" class="btn bg-primary w-full">
+            Donate Now
+          </button>
         </div>
       </section>
       <!-- qouta movment -->
@@ -130,7 +135,7 @@
         <div class="col-span-1">
           <button class="px-6 flex btn border space-x-1 py-2">
             <img class="w-5 h-5" src="./assets/coin.png" alt="" />
-            <span class="">0</span>
+            <span id="donate-amount3" class="">0</span>
             <span class="ml-1">BDT</span>
           </button>
           <h3 class="font-bold text-black py-4 text-lg">
@@ -145,15 +150,22 @@
             need.
           </p>
           <input
+            id="donate-input3"
             type="text"
             placeholder="Write Donation Amount"
             class="input input-bordered w-full my-10"
           />
-          <button class="btn bg-primary w-full">Donate Now</button>
+          <button onclick="donate(3)" class="btn bg-primary w-full">
+            Donate Now
+          </button>
         </div>
       </section>
     </main>
-    <footer class="py-20 bg-slate-100 mt-8"></footer>
+    <!-- history -->
+    <div id="history">
+      <h2 class="font-bold text-3xl text-center mt-10">Donation History</h2>
+      <div id="history-log"></div>
+    </div>
 
     <!-- js -->
     <script src="./js/blog.js"></script>
