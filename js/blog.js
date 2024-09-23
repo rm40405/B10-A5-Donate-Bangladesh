@@ -35,8 +35,15 @@ function donate(id) {
     // history
    const historyLog = document.getElementById('history-log');
    const log = document.createElement('div');
+   log.style.fontSize = '50px';
+   log.style.color = 'black';
+    log.style.margin = '20px 60px 20px 60px';
+    log.style.backgroundColor = 'rgba(250, 250, 255,255)';
+    log.style.padding = '20px';
+    log.style.border = '1px solid black';
+    log.style.borderRadius = '10px';
     log.classList.add('notification');
-    log.innerText = `Donated $${donationValue.toFixed(2)} to account ${id}  , remaining amount: $${acountBalance.innerText}`;
+    log.innerHTML = `<div>Donated $${donationValue.toFixed(2)} to account ${id}  , remaining amount: $${acountBalance.innerText}</div>`;
     historyLog.appendChild(log);
     // clear the input
      input.value = '';    
