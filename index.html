@@ -28,12 +28,12 @@
   </head>
   <body>
     <!-- navbar section -->
-    <header class="bg-secondary">
+    <header class="bg-secondary sticky top-0 overflow-hidden">
       <nav class="lg:py-5 py-3 flex justify-around mb-20">
         <button
           class="lg:btn bg-primary lg:px-10 font-bold text-xs px-2 rounded-lg"
         >
-          Blog
+          <a href="./blog.html">Blog</a>
         </button>
         <div class="lg:flex space-x-2">
           <img
@@ -49,9 +49,13 @@
         </div>
       </nav>
     </header>
-    <div class="flex justify-center space-x-4">
-      <button onclick="showDonation()" class="btn bg-primary">Donation</button>
-      <button onclick="showHistory()" class="btn">History</button>
+    <div class="flex justify-center space-x-4 mt-4">
+      <button id="donation-btn" onclick="showDonation()" class="btn bg-primary">
+        Donation
+      </button>
+      <button id="history-btn" onclick="showHistory()" class="btn">
+        History
+      </button>
     </div>
     <!-- main section -->
     <main id="donation">
@@ -85,9 +89,28 @@
             placeholder="Write Donation Amount"
             class="input input-bordered w-full my-5"
           />
-          <button onclick="donate(1)" class="btn bg-primary w-full">
-            Donate Nowa
+          <button
+            onclick="donate(1), my_modal_5.showModal()"
+            class="btn bg-primary w-full"
+          >
+            Donate Now
           </button>
+          <!-- Open the modal using ID.showModal() method -->
+
+          <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+            <div class="modal-box">
+              <h3 class="text-lg font-bold">Success</h3>
+              <p class="py-4">
+                Press ESC key or click the button below to close
+              </p>
+              <div class="modal-action">
+                <form method="dialog">
+                  <!-- if there is a button in form, it will close the modal -->
+                  <button class="btn">Close</button>
+                </form>
+              </div>
+            </div>
+          </dialog>
         </div>
       </section>
       <!-- donate feni -->

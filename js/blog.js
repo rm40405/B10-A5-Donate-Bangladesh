@@ -8,6 +8,15 @@ function showHistory() {
     document.getElementById('history').classList.remove('hidden');
 }
 
+
+
+if(donate(id)=== true){
+    displayModal();
+}
+
+
+
+
 function donate(id) {
     // 
     
@@ -19,6 +28,10 @@ function donate(id) {
     if(isNaN(donationValue) || donationValue <= 0){
         alert('please enter a valid donation');
         return;
+    }
+    
+    if(donationValue===''){
+        alert('Donate Amount cannot be empty')
     }
     const balance = parseFloat(acountBalance.innerText);
     if(balance < donationValue){
@@ -35,15 +48,20 @@ function donate(id) {
     // history
    const historyLog = document.getElementById('history-log');
    const log = document.createElement('div');
-   log.style.fontSize = '50px';
+   log.style.fontSize = '30px';
    log.style.color = 'black';
     log.style.margin = '20px 60px 20px 60px';
-    log.style.backgroundColor = 'rgba(250, 250, 255,255)';
+    log.style.backgroundColor = 'rgba(255, 250, 255,255)';
     log.style.padding = '20px';
     log.style.border = '1px solid black';
     log.style.borderRadius = '10px';
     log.classList.add('notification');
-    log.innerHTML = `<div>Donated $${donationValue.toFixed(2)} to account ${id}  , remaining amount: $${acountBalance.innerText}</div>`;
+    const dateTime = new Date().toLocaleString();
+    log.innerHTML = `<div>
+    <p>Donated $${donationValue.toFixed(2)} to account ${id}  , remaining amount: $${acountBalance.innerText}
+    </p> <br/>
+    <p>Donation date and time: ${dateTime}</p>
+    </div>`;
     historyLog.appendChild(log);
     // clear the input
      input.value = '';    
