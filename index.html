@@ -90,7 +90,8 @@
             class="input input-bordered w-full my-5"
           />
           <button
-            onclick="donate(1), my_modal_5.showModal()"
+            id="onep-modal"
+            onclick="donate(1);my_modal_5.showModal()"
             class="btn bg-primary w-full"
           >
             Donate Now
@@ -106,7 +107,7 @@
               <div class="modal-action">
                 <form method="dialog">
                   <!-- if there is a button in form, it will close the modal -->
-                  <button class="btn">Close</button>
+                  <button id="close-btn" class="btn">Close</button>
                 </form>
               </div>
             </div>

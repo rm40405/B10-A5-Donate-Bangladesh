@@ -10,9 +10,6 @@ function showHistory() {
 
 
 
-if(donate(id)=== true){
-    displayModal();
-}
 
 
 
@@ -66,6 +63,7 @@ function donate(id) {
     // clear the input
      input.value = '';    
     // reset donation input
+   
 
 
 }
