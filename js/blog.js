@@ -26,6 +26,7 @@ function donate(id) {
     if(isNaN(donationValue) || donationValue <= 0){
         alert('please enter a valid donation');
         document.getElementById('my_modal_5').classList.add('hidden');
+        window.location.reload();
         return;
     }
     
