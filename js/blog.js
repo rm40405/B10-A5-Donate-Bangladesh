@@ -35,6 +35,10 @@ function donate(id) {
         alert('insufficient funds');
         return;
     }
+     
+
+
+
     
     const newBalance = balance - donationValue;
     acountBalance.innerText = newBalance.toFixed(2);

@@ -37,15 +37,17 @@
         </button>
         <div class="lg:flex space-x-2">
           <img
-            class="lg:w-10 lg:h-10 w-5 h-5 ml-12"
+            class="lg:w-10 lg:h-10 w-3 h-3 ml-12"
             src="./assets/logo.png"
             alt=""
           />
           <h3 class="font-bold lg:mt-4 lg:ml-2 text-xs">Donate Bangladesh</h3>
         </div>
         <div class="flex space-x-2">
-          <img class="w-6 h-6" src="./assets/coin.png" alt="" />
-          <p class="inline-flex"><span id="acount-balance">5500</span> BDT</p>
+          <img class="lg:w-6 lg:h-6 w-6 h-6" src="./assets/coin.png" alt="" />
+          <p class="inline-flex text-sm">
+            <span id="acount-balance">5500</span> BDT
+          </p>
         </div>
       </nav>
     </header>
@@ -91,8 +93,8 @@
           />
           <button
             id="onep-modal"
-            onclick="donate(1);my_modal_5.showModal()"
-            class="btn bg-primary w-full"
+            onclick="my_modal_5.showModal(); donate(1);"
+            class="btn donate-now bg-primary w-full"
           >
             Donate Now
           </button>
@@ -100,10 +102,12 @@
 
           <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
             <div class="modal-box">
-              <h3 class="text-lg font-bold">Success</h3>
-              <p class="py-4">
-                Press ESC key or click the button below to close
-              </p>
+              <h3 class="text-4xl font-bold text-orange-600 text-center">
+                Congrates!
+              </h3>
+              <img class="ml-52 mt-4" src="./assets/coin.png" alt="" />
+              <p class="py-4 text-center">You have Donated for Humankind</p>
+              <p class="text-center">Successfully</p>
               <div class="modal-action">
                 <form method="dialog">
                   <!-- if there is a button in form, it will close the modal -->
@@ -144,7 +148,10 @@
             placeholder="Write Donation Amount"
             class="input input-bordered w-full my-8"
           />
-          <button onclick="donate(2)" class="btn bg-primary w-full">
+          <button
+            onclick="my_modal_5.showModal(); donate(2)"
+            class="btn bg-primary w-full"
+          >
             Donate Now
           </button>
         </div>
@@ -179,7 +186,10 @@
             placeholder="Write Donation Amount"
             class="input input-bordered w-full my-10"
           />
-          <button onclick="donate(3)" class="btn bg-primary w-full">
+          <button
+            onclick="my_modal_5.showModal(); donate(3)"
+            class="btn bg-primary w-full"
+          >
             Donate Now
           </button>
         </div>
