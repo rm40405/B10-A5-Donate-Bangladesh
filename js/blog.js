@@ -2,6 +2,7 @@
 function showDonation() {
     document.getElementById('donation').classList.remove('hidden');
     document.getElementById('history').classList.add('hidden');
+    
 }
 function showHistory() {
     document.getElementById('donation').classList.add('hidden');
@@ -24,6 +25,7 @@ function donate(id) {
 
     if(isNaN(donationValue) || donationValue <= 0){
         alert('please enter a valid donation');
+        document.getElementById('my_modal_5').classList.add('hidden');
         return;
     }
     
